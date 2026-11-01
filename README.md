@@ -1,5 +1,5 @@
 # UK Tick Sighting Interactive Map
-### Access the demo site here: https://nicko302.github.io/tick-sighting-elanco-webapp/
+### Access the demo site here: https://nicko302.github.io/tick-sighting-elanco-frontend/
 ### Walkthrough video: https://youtu.be/aoYbuUD6Ow8
 ## Outline
 Ticks and tick-borne diseases are a huge concern across the UK. This Minimum Viable Product demonstrates the functionality for a web app to gather live data of tick sightings into a single user-friendly platform to encourage community engagement.

@@ -32,22 +32,63 @@
     </header>
 
     <!-- map container -->
-    <div class="w-[50vw] h-[80vh] mx-auto overflow-auto flex flex-col gap-6 p-1">
+    <div class="w-[50vw] h-[110vh] mx-auto overflow-auto flex flex-col gap-6 p-1">
         <!-- city list and map -->
         <div class="flex flex-row h-[60%] w-full">
-            <div id="city-panel" class="ring-2 ring-gray-200 w-[35%] h-full p-4 mr-3 rounded-xl flex flex-col overflow-hidden">
+            <div id="city-panel" class="shadow-md ring-2 ring-gray-200 w-[35%] h-full p-4 mr-3 rounded-xl flex flex-col overflow-hidden">
                 <div id="city-content" class="flex flex-col h-full transition-opacity duration-300 ease-in-out opacity-100">
                     <h1 class="font-bold text-2xl mb-2">Cities</h1>
                     <ul id="city-items" class="list-none pl-5 overflow-y-auto flex-grow"></ul>
                 </div>
             </div>
             
-            <div id="map" class="h-full w-[65%] ml-3 rounded-xl bg-gray-200 ring-2 ring-gray-200"></div>
+            <div id="map" class="shadow-md h-full w-[65%] ml-3 rounded-xl bg-gray-200 ring-2 ring-gray-200"></div>
         </div>
 
         <!-- species information -->
-        <div id="species-info" class="h-[35%] w-full rounded-xl ring-2 ring-gray-200 p-4">
-            <h1 class="font-bold text-2xl">Species Information</h1>
+        <div id="species-info" class="shadow-md h-[35%] w-full rounded-xl ring-2 ring-gray-200 p-4">
+            <div id="species-info-header" class="flex justify-between items-center">
+                <h1 class="font-bold text-2xl">Species Information</h1>
+            </div>
+            <p class="text-gray-700 mt-1">Select a species to view more details.</p>
+
+            <div id="cards-container" class="mt-2 flex h-full">
+
+                <div id="species-cards-1" class="overflow-y-auto inline-block h-[75%] w-[20%] mt-3 ml-3 bg-gray-100 rounded-lg p-3" onclick="displaySpeciesInfo('Ixodes canisuga')">
+                    <h2 class="font-bold text-md">Ixodes canisuga</h2>
+                    <p class="bg-gray-300 mt-1 py-1 px-2 rounded-lg text-sm w-[full]">Fox/badger tick</p>
+                    <p class="text-md mt-1">Feeds on foxes, cats, dogs, horses, badgers and sheep. It has a thick cuticle which allows it to withstand dry conditions.</p>
+                </div>
+                <div id="species-cards-2" class="overflow-y-auto inline-block h-[75%] w-[20%] mt-3 ml-3 bg-gray-100 rounded-lg p-3" onclick="displaySpeciesInfo('Ixodes apronophorus')">
+                    <h2 class="font-bold text-md">Ixodes apronophorus</h2>
+                    <p class="bg-gray-300 mt-1 py-1 px-2 rounded-lg text-sm w-[full]">Marsh tick</p>
+                    <p class="text-md mt-1">Feeds on marsh animals and has a preference for humid environments.</p>
+                </div>
+                <div id="species-cards-3" class="overflow-y-auto inline-block h-[75%] w-[20%] mt-3 ml-3 bg-gray-100 rounded-lg p-3" onclick="displaySpeciesInfo('Ixodes acuminatus')">
+                    <h2 class="font-bold text-md">Ixodes acuminatus</h2>
+                    <p class="bg-gray-300 mt-1 py-1 px-2 rounded-lg text-sm w-[full]">Southern rodent tick</p>
+                    <p class="text-md mt-1">Found in the southern regions and primarily feeds on rodents.</p>
+                </div>
+                <div id="species-cards-4" class="overflow-y-auto inline-block h-[75%] w-[20%] mt-3 ml-3 bg-gray-100 rounded-lg p-3" onclick="displaySpeciesInfo('Dermacentor frontalis')">
+                    <h2 class="font-bold text-md">Dermacentor frontalis</h2>
+                    <p class="bg-gray-300 mt-1 py-1 px-2 rounded-lg text-sm w-[full]">Passerine tick</p>
+                    <p class="text-md mt-1">Feeds on birds and has a preference for open habitats.</p>
+                </div>
+                <div id="species-cards-5" class="overflow-y-auto inline-block h-[75%] w-[20%] mt-3 ml-3 bg-gray-100 rounded-lg p-3" onclick="displaySpeciesInfo('Ixodes arboricola')">
+                    <h2 class="font-bold text-md">Ixodes arboricola</h2>
+                    <p class="bg-gray-300 mt-1 py-1 px-2 rounded-lg text-sm w-[full]">Tree-hole tick</p>
+                    <p class="text-md mt-1">Found in tree holes and has a preference for forested areas.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- prevention information -->
+        <div id="prevention-info" class="shadow-md h-[35%] w-full rounded-xl ring-2 ring-gray-200 p-4">
+            <div id="prevention-info-header" class="flex justify-between items-center">
+                <h1 class="font-bold text-2xl">Prevention Information</h1>
+            </div>
+            <p class="text-gray-700 mt-1">Select a topic to view more details.</p>
         </div>
     </div>
 

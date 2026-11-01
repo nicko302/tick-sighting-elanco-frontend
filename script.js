@@ -161,6 +161,54 @@ async function displayCityDetails(city) {
     cityContainer.classList.remove('opacity-0');
 }
 
+// onclick event for the species cards
+function displaySpeciesInfo(species) {
+    const speciesInfoContainer = document.getElementById('species-info-header');
+    speciesInfoContainer.innerHTML += `
+    <button class="w-[5rem] bg-blue-500 text-white px-3 py-1 mb-2 rounded-lg hover:bg-blue-600" onclick="displayAllSpecies()">Back</button>
+    `;
+}
+
+function displayAllSpecies() {
+    const speciesInfoContainer = document.getElementById('species-info');
+    
+    speciesInfoContainer.innerHTML = `
+                <div id="species-info-header" class="flex justify-between items-center">
+                    <h1 class="font-bold text-2xl">Species Information</h1>
+                </div>
+                <p class="text-gray-700 mt-1">Select a species to view more details.</p>
+                <div id="cards-container" class="mt-2 flex h-full">
+
+                <div id="species-cards-1" class="overflow-y-auto inline-block h-[75%] w-[20%] mt-3 ml-3 bg-gray-100 rounded-lg p-3" onclick="displaySpeciesInfo('Ixodes canisuga')">
+                    <h2 class="font-bold text-md">Ixodes canisuga</h2>
+                    <p class="bg-gray-300 mt-1 py-1 px-2 rounded-lg text-sm w-[full]">Fox/badger tick</p>
+                    <p class="text-md mt-1">Feeds on foxes, cats, dogs, horses, badgers and sheep. It has a thick cuticle which allows it to withstand dry conditions.</p>
+                </div>
+                <div id="species-cards-2" class="overflow-y-auto inline-block h-[75%] w-[20%] mt-3 ml-3 bg-gray-100 rounded-lg p-3" onclick="displaySpeciesInfo('Ixodes apronophorus')">
+                    <h2 class="font-bold text-md">Ixodes apronophorus</h2>
+                    <p class="bg-gray-300 mt-1 py-1 px-2 rounded-lg text-sm w-[full]">Marsh tick</p>
+                    <p class="text-md mt-1">Feeds on marsh animals and has a preference for humid environments.</p>
+                </div>
+                <div id="species-cards-3" class="overflow-y-auto inline-block h-[75%] w-[20%] mt-3 ml-3 bg-gray-100 rounded-lg p-3" onclick="displaySpeciesInfo('Ixodes acuminatus')">
+                    <h2 class="font-bold text-md">Ixodes acuminatus</h2>
+                    <p class="bg-gray-300 mt-1 py-1 px-2 rounded-lg text-sm w-[full]">Southern rodent tick</p>
+                    <p class="text-md mt-1">Found in the southern regions and primarily feeds on rodents.</p>
+                </div>
+                <div id="species-cards-4" class="overflow-y-auto inline-block h-[75%] w-[20%] mt-3 ml-3 bg-gray-100 rounded-lg p-3" onclick="displaySpeciesInfo('Dermacentor frontalis')">
+                    <h2 class="font-bold text-md">Dermacentor frontalis</h2>
+                    <p class="bg-gray-300 mt-1 py-1 px-2 rounded-lg text-sm w-[full]">Passerine tick</p>
+                    <p class="text-md mt-1">Feeds on birds and has a preference for open habitats.</p>
+                </div>
+                <div id="species-cards-5" class="overflow-y-auto inline-block h-[75%] w-[20%] mt-3 ml-3 bg-gray-100 rounded-lg p-3" onclick="displaySpeciesInfo('Ixodes arboricola')">
+                    <h2 class="font-bold text-md">Ixodes arboricola</h2>
+                    <p class="bg-gray-300 mt-1 py-1 px-2 rounded-lg text-sm w-[full]">Tree-hole tick</p>
+                    <p class="text-md mt-1">Found in tree holes and has a preference for forested areas.</p>
+                </div>
+
+                </div>
+                `;
+}
+
 
 // initialisation function to load and display data
 async function init() {

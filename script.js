@@ -6,10 +6,10 @@ const tiles = L.tileLayer('https://api.thunderforest.com/atlas/{z}/{x}/{y}.png?a
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-//map.locate({ setView: true, maxZoom: 14 });
-//map.on('locationerror', function() {
+map.locate({ setView: true, maxZoom: 14 });
+map.on('locationerror', function() {
     map.setView([54.2, -3], 6);
-//});
+});
 
 
 async function getAllData() {

@@ -33,10 +33,12 @@
 
     <!-- Map Container -->
     <div class="w-[50vw] h-[60vh] mx-auto overflow-auto flex flex-col gap-6 p-1">
-        <!-- Legend and Map -->
+        <!-- City List and Map -->
         <div class="flex flex-row h-[70%] w-full">
-            <div id="legend" class="ring-2 ring-gray-200 w-[35%] h-full p-4 mr-3 rounded-xl">
-                <h1 class="font-bold text-2xl">Sightings</h1>
+            <div id="city-list" class="ring-2 ring-gray-200 w-[35%] h-full p-4 mr-3 rounded-xl flex flex-col overflow-hidden">
+                <h1 class="font-bold text-2xl mb-2 flex-shrink-0">Cities</h1>
+                <ul id="city-items" class="list-none pl-5 overflow-y-auto flex-grow">
+                </ul>
             </div>
             
             <div id="map" class="h-full w-[65%] ml-3 rounded-xl bg-gray-200 ring-2 ring-gray-200"></div>
